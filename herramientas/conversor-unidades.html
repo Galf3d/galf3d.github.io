@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de unidades industriales: presión, torque, pulgadas | Galf3D</title>
+<meta name="description" content="Convierte unidades de taller: mm a pulgadas, bar a psi, N·m a lb·ft, kgf a N, °C a °F, m/min a SFM y más. Incluye tabla de fracciones de pulgada a milímetros.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/conversor-unidades.html">
+<meta property="og:title" content="Conversor de unidades industriales: presión, torque, pulgadas | Galf3D">
+<meta property="og:description" content="Convierte unidades de taller: mm a pulgadas, bar a psi, N·m a lb·ft, kgf a N, °C a °F, m/min a SFM y más. Incluye tabla de fracciones de pulgada a milímetros.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/conversor-unidades.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Conversor de unidades industriales", "url": "https://galf3d.github.io/herramientas/conversor-unidades.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Conversor de unidades industriales</nav>
+  <div class="tool-head"><h1>Conversor de unidades industriales</h1><p>Longitud, presión, torque, fuerza, temperatura, masa y velocidad de corte, con las unidades que se usan en el taller.</p></div>
+  <div class="panel" style="margin-bottom:20px">
+  <h2>Tipo de medida</h2>
+  <div class="toggle-row" id="cats"></div>
+</div>
+<div class="tool">
+  <div class="panel">
+    <h2>Convertir</h2>
+    <div class="fields">
+      <div class="full"><label for="val">Valor</label><input id="val" type="number" step="any" value="1"></div>
+      <div><label for="from">De</label><select id="from"></select></div>
+      <div><label for="to">A</label><select id="to"></select></div>
+      <div class="full"><button class="btn btn-sm" id="swap" type="button">⇅ Intercambiar unidades</button></div>
+    </div>
+    <div class="readout" style="margin-top:16px"><div class="lbl">Resultado</div><div class="big red" id="res">—</div><div class="small" id="res2"></div></div>
+  </div>
+  <div class="panel">
+    <h2>Equivalencias</h2>
+    <table class="tbl" id="all"></table>
+  </div>
+</div>
+<div class="panel" style="margin-top:20px">
+  <h2>Fracciones de pulgada a milímetros</h2>
+  <div style="overflow-x:auto"><table class="tbl" id="frac"></table></div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>En el canal encontrarás tutoriales de diseño, medición y fabricación.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>Conversiones más usadas en el taller</h2>
+<p>En México convivimos con el sistema métrico y el inglés: los planos llegan en milímetros, las brocas y la tornillería en pulgadas, los manómetros en psi y las llaves de torque en libras-pie. Este conversor reúne las unidades que más se usan en impresión 3D, maquinado, mantenimiento y automatización.</p>
+<h3>Longitud</h3>
+<span class="formula">1 in = 25.4 mm · 1 ft = 304.8 mm · 1 mil (milésima) = 0.0254 mm</span>
+<h3>Presión</h3>
+<span class="formula">1 bar = 14.504 psi = 100 kPa · 1 kgf/cm² = 0.981 bar</span>
+<h3>Torque</h3>
+<span class="formula">1 N·m = 0.7376 lbf·ft = 8.851 lbf·in · 1 kgf·m = 9.807 N·m</span>
+<h3>Fuerza</h3>
+<span class="formula">1 kgf = 9.807 N · 1 lbf = 4.448 N</span>
+<h3>Temperatura</h3>
+<span class="formula">°F = °C × 9/5 + 32 · K = °C + 273.15</span>
+<h3>Velocidad de corte</h3>
+<span class="formula">1 m/min = 3.281 SFM (pies por minuto) · 1 in/min = 25.4 mm/min</span>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Cuántos milímetros es 1/4 de pulgada?</summary><p>1/4" son 6.35 mm. En la tabla de fracciones tienes las equivalencias desde 1/64" hasta 1".</p></details>
+<details class="faq"><summary>¿Cuántos psi tiene un bar?</summary><p>Un bar equivale a 14.504 psi. Por ejemplo, 6 bar de un compresor son unos 87 psi.</p></details>
+<details class="faq"><summary>¿Es lo mismo kgf/cm² que bar?</summary><p>Casi: 1 kgf/cm² son 0.981 bar. En la práctica de taller se usan como equivalentes, pero para cálculos precisos conviene convertir.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var U={
+ 'Longitud':{mm:['Milímetro (mm)',1],cm:['Centímetro (cm)',10],m:['Metro (m)',1000],in:['Pulgada (in)',25.4],ft:['Pie (ft)',304.8],mil:['Milésima (mil)',0.0254],um:['Micra (µm)',0.001]},
+ 'Presión':{bar:['Bar',1],psi:['psi (lb/in²)',1/14.5037738],kpa:['Kilopascal (kPa)',0.01],mpa:['Megapascal (MPa)',10],kgcm:['kgf/cm²',0.980665],atm:['Atmósfera (atm)',1.01325],inhg:['Pulgadas de mercurio (inHg)',0.0338639]},
+ 'Torque':{nm:['Newton-metro (N·m)',1],lbft:['Libra-pie (lbf·ft)',1.3558179],lbin:['Libra-pulgada (lbf·in)',0.1129848],kgm:['kgf·m',9.80665],kgcm:['kgf·cm',0.0980665],ozin:['Onza-pulgada (ozf·in)',0.0070615518]},
+ 'Fuerza':{n:['Newton (N)',1],kn:['Kilonewton (kN)',1000],kgf:['Kilogramo-fuerza (kgf)',9.80665],lbf:['Libra-fuerza (lbf)',4.4482216],tf:['Tonelada-fuerza (tf)',9806.65]},
+ 'Masa':{g:['Gramo (g)',1],kg:['Kilogramo (kg)',1000],lb:['Libra (lb)',453.59237],oz:['Onza (oz)',28.349523],t:['Tonelada (t)',1000000]},
+ 'Temperatura':{c:['Celsius (°C)'],f:['Fahrenheit (°F)'],k:['Kelvin (K)']},
+ 'Velocidad de corte':{mmin:['m/min',1],sfm:['SFM (ft/min)',0.3048],mmmin:['mm/min',0.001],inmin:['in/min',0.0254],ms:['m/s',60]}
+};
+var cat='Longitud';
+function toC(v,u){ return u==='c'?v: u==='f'?(v-32)*5/9 : v-273.15; }
+function fromC(v,u){ return u==='c'?v: u==='f'?v*9/5+32 : v+273.15; }
+function conv(v,a,b){ if(cat==='Temperatura') return fromC(toC(v,a),b); return v*U[cat][a][1]/U[cat][b][1]; }
+function nice(x){ if(!isFinite(x)) return '—'; var a=Math.abs(x); var d= a===0?0: a>=1000?2: a>=1?4: 6; return x.toLocaleString('es-MX',{maximumFractionDigits:d}); }
+function fill(){
+  var keys=Object.keys(U[cat]), f=document.getElementById('from'), t=document.getElementById('to');
+  f.innerHTML=t.innerHTML=keys.map(function(k){return '<option value="'+k+'">'+U[cat][k][0]+'</option>';}).join('');
+  f.value=keys[0]; t.value=keys[1];
+  document.querySelectorAll('#cats .chip').forEach(function(c){ c.classList.toggle('on',c.dataset.c===cat); });
+  calc();
+}
+function calc(){
+  var v=parseFloat(document.getElementById('val').value), a=document.getElementById('from').value, b=document.getElementById('to').value;
+  if(!isFinite(v)){ document.getElementById('res').textContent='—'; return; }
+  var r=conv(v,a,b);
+  document.getElementById('res').textContent=nice(r)+' '+U[cat][b][0].replace(/.*\((.*)\)/,'$1');
+  document.getElementById('res2').textContent=nice(v)+' '+U[cat][a][0];
+  document.getElementById('all').innerHTML='<tr><th>Unidad</th><th>Valor</th></tr>'+Object.keys(U[cat]).map(function(k){ return '<tr><td>'+U[cat][k][0]+'</td><td>'+nice(conv(v,a,k))+'</td></tr>'; }).join('');
+}
+document.getElementById('cats').innerHTML=Object.keys(U).map(function(k){return '<button class="chip" data-c="'+k+'" type="button">'+k+'</button>';}).join('');
+document.querySelectorAll('#cats .chip').forEach(function(c){ c.addEventListener('click',function(){ cat=c.dataset.c; fill(); }); });
+document.getElementById('swap').addEventListener('click',function(){ var f=document.getElementById('from'),t=document.getElementById('to'),x=f.value; f.value=t.value; t.value=x; calc(); });
+['val','from','to'].forEach(function(i){ var e=document.getElementById(i); e.addEventListener('input',calc); e.addEventListener('change',calc); });
+(function(){ var rows=[], fr=[];
+  for(var n=1;n<=64;n++){ var d=64,nn=n; while(nn%2===0&&d>1){nn/=2;d/=2;} if([1,2,4,8,16,32,64].indexOf(d)>=0 && (d<=16 || n%2===1 || true)) fr.push([nn,d,n/64]); }
+  var sel=fr.filter(function(x){ return x[1]<=32; });
+  var cols=4, per=Math.ceil(sel.length/cols), html='<tr>'+Array(cols).fill('<th>Pulgada</th><th>mm</th>').join('')+'</tr>';
+  for(var i=0;i<per;i++){ html+='<tr>'; for(var c=0;c<cols;c++){ var x=sel[c*per+i]; html+= x? '<td>'+(x[1]===1?x[0]:x[0]+'/'+x[1])+'"</td><td>'+(x[2]*25.4).toFixed(3)+'</td>' : '<td></td><td></td>'; } html+='</tr>'; }
+  document.getElementById('frac').innerHTML=html; })();
+fill();
+</script>
+</body></html>

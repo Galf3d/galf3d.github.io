@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotizador de trabajos por hora para talleres (gratis) | Galf3D</title>
+<meta name="description" content="Cotiza trabajos de maquinado, soldadura, diseño, programación o armado: horas por tarifa, materiales, transporte, margen e IVA. Imprime o comparte por WhatsApp.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/cotizador-por-hora.html">
+<meta property="og:title" content="Cotizador de trabajos por hora para talleres (gratis) | Galf3D">
+<meta property="og:description" content="Cotiza trabajos de maquinado, soldadura, diseño, programación o armado: horas por tarifa, materiales, transporte, margen e IVA. Imprime o comparte por WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/cotizador-por-hora.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Cotizador de trabajos por hora", "url": "https://galf3d.github.io/herramientas/cotizador-por-hora.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Cotizador de trabajos por hora</nav>
+  <div class="tool-head"><h1>Cotizador de trabajos por hora</h1><p>Arma una cotización de maquinado, soldadura, programación o armado con horas, materiales, transporte, margen e IVA.</p></div>
+  <div class="panel" style="margin-bottom:20px">
+  <div class="panel-title"><h2>Datos de la cotización</h2><span class="state" id="state"><span class="dot"></span><span id="stateTxt">Sin cambios</span></span></div>
+  <div class="fields">
+    <div><label for="cliente">Cliente</label><input id="cliente" type="text" placeholder="Nombre del cliente o empresa"></div>
+    <div><label for="proyecto">Proyecto</label><input id="proyecto" type="text" placeholder="Ej. Soporte de motor en aluminio"></div>
+  </div>
+</div>
+<div class="tool">
+  <div>
+    <div class="panel" style="margin-bottom:20px">
+      <div class="panel-title"><h2>Mano de obra</h2><button class="btn btn-sm no-print" id="addMO" type="button">+ Agregar</button></div>
+      <table class="tbl"><thead><tr><th>Concepto</th><th style="width:90px">Horas</th><th style="width:110px">$/hora</th><th style="width:100px">Importe</th><th style="width:36px"></th></tr></thead><tbody id="tMO"></tbody></table>
+    </div>
+    <div class="panel" style="margin-bottom:20px">
+      <div class="panel-title"><h2>Materiales e insumos</h2><button class="btn btn-sm no-print" id="addMat" type="button">+ Agregar</button></div>
+      <table class="tbl"><thead><tr><th>Concepto</th><th style="width:90px">Cant.</th><th style="width:110px">Precio u.</th><th style="width:100px">Importe</th><th style="width:36px"></th></tr></thead><tbody id="tMat"></tbody></table>
+    </div>
+    <div class="panel">
+      <h2>Ajustes</h2>
+      <div class="fields">
+        <div><label for="transp">Transporte / envío</label><div class="unit-in"><input id="transp" type="number" min="0" step="10" value="0"><span>MXN</span></div></div>
+        <div><label for="indir">Gastos indirectos</label><div class="unit-in"><input id="indir" type="number" min="0" step="1" value="10"><span>%</span></div></div>
+        <div><label for="margen">Ganancia</label><div class="unit-in"><input id="margen" type="number" min="0" step="1" value="30"><span>%</span></div></div>
+        <div><label for="iva">IVA</label><select id="iva"><option value="16">Agregar IVA 16 %</option><option value="8">Agregar IVA 8 % (frontera)</option><option value="0">Sin IVA</option></select></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Resumen</h2>
+    <div class="readout"><div class="lbl">Total a cotizar</div><div class="big red" id="rTotal">$0.00</div><div class="small" id="rSub"></div></div>
+    <ul class="rows">
+      <li><span>Mano de obra</span><span id="rMO">$0.00</span></li>
+      <li><span>Materiales</span><span id="rMat">$0.00</span></li>
+      <li><span>Transporte</span><span id="rTr">$0.00</span></li>
+      <li><span>Gastos indirectos</span><span id="rInd">$0.00</span></li>
+      <li class="total"><span>Costo</span><span id="rCosto">$0.00</span></li>
+      <li><span>Ganancia</span><span id="rGan">$0.00</span></li>
+      <li><span>Subtotal</span><span id="rSubt">$0.00</span></li>
+      <li><span id="lblIva">IVA</span><span id="rIva">$0.00</span></li>
+    </ul>
+    <div class="toggle-row no-print" style="margin-top:16px">
+      <button class="btn btn-primary btn-sm" id="save" type="button">Guardar</button>
+      <button class="btn btn-sm" id="wa" type="button">Compartir por WhatsApp</button>
+      <button class="btn btn-sm" type="button" onclick="window.print()">Imprimir / PDF</button>
+      <button class="btn btn-sm" id="clear" type="button">Nueva cotización</button>
+    </div>
+    <p class="note">"Guardar" deja la cotización en este navegador para que la retomes después. Nada se envía a internet.</p>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>En el canal compartimos cómo trabajamos proyectos de taller de principio a fin.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Cómo cotizar un trabajo de taller por hora?</h2>
+<p>En maquinado, soldadura, diseño, programación o armado, lo que realmente vendes es tiempo calificado y uso de máquinas. Por eso la forma más clara de cotizar es por horas: estimas cuántas horas lleva cada proceso, lo multiplicas por su tarifa y sumas los materiales.</p>
+<span class="formula">Total = [(horas × tarifa) + materiales + transporte] × (1 + indirectos) × (1 + ganancia) × (1 + IVA)</span>
+<h3>1. Separa los procesos</h3>
+<p>No todas las horas valen lo mismo. Una hora de torno CNC cuesta más que una de armado manual, porque incluye la máquina, la herramienta y la electricidad. Registra cada proceso por separado: diseño, programación, maquinado, soldadura, acabado y armado.</p>
+<h3>2. Calcula tu tarifa por hora</h3>
+<p>Una tarifa sana cubre tu sueldo, el desgaste de la máquina, la herramienta de corte, la luz y la renta del espacio. Si no la conoces, suma tus gastos fijos del mes y divídelos entre las horas que realmente trabajas.</p>
+<h3>3. Gastos indirectos</h3>
+<p>Son los costos que no se ven en una pieza específica: discos, brocas, gas, lijas, teléfono o papelería. Un 5 a 15 % suele cubrirlos.</p>
+<h3>4. Ganancia e IVA</h3>
+<p>La ganancia es lo que le queda al negocio para crecer. El IVA solo se agrega si facturas; en la región fronteriza puede aplicar la tasa del 8 %. Consulta a tu contador si tienes dudas sobre tu régimen.</p>
+<h2>Consejos para que te acepten la cotización</h2>
+<ul>
+  <li>Describe el alcance: qué incluye y qué no (diseño, planos, tratamientos, entrega).</li>
+  <li>Indica la vigencia de la cotización y el tiempo de entrega.</li>
+  <li>Pide anticipo en trabajos a la medida, sobre todo si compras material especial.</li>
+  <li>Guarda tus cotizaciones: te sirven para comparar lo estimado con lo real y mejorar tus tiempos.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Cuánto cobrar por hora de maquinado CNC?</summary><p>Depende de la máquina, la ciudad y el material. Calcula tu costo por hora (máquina, herramienta, luz, sueldo y espacio) y agrega tu ganancia; así tu tarifa refleja tus costos reales.</p></details>
+<details class="faq"><summary>¿Mis datos se guardan en internet?</summary><p>No. La cotización solo se guarda en tu navegador cuando presionas "Guardar".</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var KEY='galf3d_cotizador_v1', dirty=false;
+var DEF={cliente:'',proyecto:'',mo:[['Diseño / programación',2,150],['Maquinado CNC',3,350],['Armado y acabado',1,120]],mat:[['Barra de aluminio 6061',1,450]],transp:0,indir:10,margen:30,iva:'16'};
+function rowHtml(r,kind){
+  return '<tr><td><input type="text" value="'+(r[0]||'').replace(/"/g,'&quot;')+'"></td><td><input type="number" min="0" step="0.25" value="'+r[1]+'"></td><td><input type="number" min="0" step="1" value="'+r[2]+'"></td><td class="imp">$0.00</td><td><button class="icon-btn no-print" title="Quitar" type="button">×</button></td></tr>';
+}
+function load(d){
+  document.getElementById('cliente').value=d.cliente||''; document.getElementById('proyecto').value=d.proyecto||'';
+  document.getElementById('tMO').innerHTML=d.mo.map(function(r){return rowHtml(r);}).join('');
+  document.getElementById('tMat').innerHTML=d.mat.map(function(r){return rowHtml(r);}).join('');
+  document.getElementById('transp').value=d.transp; document.getElementById('indir').value=d.indir; document.getElementById('margen').value=d.margen; document.getElementById('iva').value=d.iva;
+  calc(); setDirty(false);
+}
+function rows(id){ return Array.prototype.map.call(document.querySelectorAll('#'+id+' tr'),function(tr){var i=tr.querySelectorAll('input');return [i[0].value,parseFloat(i[1].value)||0,parseFloat(i[2].value)||0];}); }
+function data(){ return {cliente:document.getElementById('cliente').value,proyecto:document.getElementById('proyecto').value,mo:rows('tMO'),mat:rows('tMat'),transp:G3.num('transp'),indir:G3.num('indir'),margen:G3.num('margen'),iva:document.getElementById('iva').value}; }
+var totals={};
+function calc(){
+  var sum=function(id){ var s=0; document.querySelectorAll('#'+id+' tr').forEach(function(tr){ var i=tr.querySelectorAll('input'); var v=(parseFloat(i[1].value)||0)*(parseFloat(i[2].value)||0); tr.querySelector('.imp').textContent=G3.mxn(v); s+=v; }); return s; };
+  var mo=sum('tMO'), mat=sum('tMat'), tr=G3.num('transp');
+  var ind=(mo+mat+tr)*G3.num('indir')/100, costo=mo+mat+tr+ind, gan=costo*G3.num('margen')/100, sub=costo+gan;
+  var ivaP=parseFloat(document.getElementById('iva').value), iva=sub*ivaP/100, total=sub+iva;
+  var s=function(id,v){document.getElementById(id).textContent=G3.mxn(v);};
+  s('rMO',mo);s('rMat',mat);s('rTr',tr);s('rInd',ind);s('rCosto',costo);s('rGan',gan);s('rSubt',sub);s('rIva',iva);s('rTotal',total);
+  document.getElementById('lblIva').textContent='IVA '+ivaP+' %';
+  document.getElementById('rSub').textContent= ivaP? 'IVA incluido':'Sin IVA';
+  totals={mo:mo,mat:mat,tr:tr,sub:sub,iva:iva,total:total,ivaP:ivaP};
+}
+function setDirty(v){ dirty=v; var st=document.getElementById('state'); st.classList.toggle('dirty',v); document.getElementById('stateTxt').textContent=v?'Cambios sin guardar':'Guardado'; }
+function onEdit(){ calc(); setDirty(true); }
+document.addEventListener('input',function(e){ if(e.target.closest('.tool')||e.target.id==='cliente'||e.target.id==='proyecto') onEdit(); });
+document.addEventListener('change',function(e){ if(e.target.id==='iva') onEdit(); });
+document.addEventListener('click',function(e){ if(e.target.classList.contains('icon-btn')){ e.target.closest('tr').remove(); onEdit(); } });
+document.getElementById('addMO').addEventListener('click',function(){ document.getElementById('tMO').insertAdjacentHTML('beforeend',rowHtml(['',1,0])); onEdit(); });
+document.getElementById('addMat').addEventListener('click',function(){ document.getElementById('tMat').insertAdjacentHTML('beforeend',rowHtml(['',1,0])); onEdit(); });
+document.getElementById('save').addEventListener('click',function(){ try{ localStorage.setItem(KEY,JSON.stringify(data())); setDirty(false); }catch(err){ alert('No se pudo guardar en este navegador.'); } });
+document.getElementById('clear').addEventListener('click',function(){ if(dirty && !confirm('Tienes cambios sin guardar. ¿Empezar una cotización nueva?')) return; load({cliente:'',proyecto:'',mo:[['',1,0]],mat:[['',1,0]],transp:0,indir:10,margen:30,iva:'16'}); setDirty(true); });
+document.getElementById('wa').addEventListener('click',function(){
+  var d=data(), t='*Cotización*'+(d.proyecto?' – '+d.proyecto:'')+(d.cliente?'\nCliente: '+d.cliente:'')+'\n\n';
+  d.mo.filter(function(r){return r[0];}).forEach(function(r){ t+='• '+r[0]+': '+r[1]+' h\n'; });
+  d.mat.filter(function(r){return r[0];}).forEach(function(r){ t+='• '+r[0]+' ×'+r[1]+'\n'; });
+  t+='\nSubtotal: '+G3.mxn(totals.sub)+(totals.ivaP?'\nIVA '+totals.ivaP+' %: '+G3.mxn(totals.iva):'')+'\n*Total: '+G3.mxn(totals.total)+'*';
+  window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');
+});
+window.addEventListener('beforeunload',function(e){ if(dirty){ e.preventDefault(); e.returnValue=''; } });
+var saved=null; try{ saved=JSON.parse(localStorage.getItem(KEY)); }catch(err){}
+load(saved||DEF); if(!saved){ document.getElementById('stateTxt').textContent='Ejemplo (sin guardar)'; }
+</script>
+</body></html>

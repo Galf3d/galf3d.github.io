@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de filamento: gramos a metros y filamento restante | Galf3D</title>
+<meta name="description" content="Convierte gramos de filamento a metros (y metros a gramos) para PLA, PETG, ABS, TPU y más, en 1.75 o 2.85 mm. Calcula cuánto filamento le queda a tu carrete.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/calculadora-filamento.html">
+<meta property="og:title" content="Calculadora de filamento: gramos a metros y filamento restante | Galf3D">
+<meta property="og:description" content="Convierte gramos de filamento a metros (y metros a gramos) para PLA, PETG, ABS, TPU y más, en 1.75 o 2.85 mm. Calcula cuánto filamento le queda a tu carrete.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/calculadora-filamento.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de filamento", "url": "https://galf3d.github.io/herramientas/calculadora-filamento.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Calculadora de filamento</nav>
+  <div class="tool-head"><h1>Calculadora de filamento</h1><p>Convierte gramos a metros y viceversa según material y diámetro, y calcula cuánto filamento le queda a tu carrete.</p></div>
+  <div class="tool">
+  <div class="panel">
+    <h2>Material y diámetro</h2>
+    <div class="fields">
+      <div><label for="mat">Material</label>
+        <select id="mat">
+          <option value="1.24">PLA · 1.24 g/cm³</option><option value="1.27">PETG · 1.27 g/cm³</option>
+          <option value="1.04">ABS · 1.04 g/cm³</option><option value="1.07">ASA · 1.07 g/cm³</option>
+          <option value="1.21">TPU · 1.21 g/cm³</option><option value="1.14">Nylon · 1.14 g/cm³</option>
+          <option value="1.20">PC · 1.20 g/cm³</option><option value="1.30">PLA+ / PLA con carga · 1.30 g/cm³</option>
+          <option value="custom">Otra densidad…</option>
+        </select></div>
+      <div><label for="dens">Densidad</label><div class="unit-in"><input id="dens" type="number" step="0.01" min="0.5" value="1.24"><span>g/cm³</span></div></div>
+      <div><label for="dia">Diámetro</label><select id="dia"><option value="1.75">1.75 mm</option><option value="2.85">2.85 mm</option><option value="3.00">3.00 mm</option></select></div>
+      <div><label>Peso por metro</label><div class="readout" style="margin:0;padding:9px 12px"><span class="mono" id="gpm">—</span></div></div>
+
+      <div class="group-title">Convertir</div>
+      <div><label for="gramos">Gramos</label><div class="unit-in"><input id="gramos" type="number" min="0" step="1" value="100"><span>g</span></div></div>
+      <div><label for="metros">Metros</label><div class="unit-in"><input id="metros" type="number" min="0" step="0.1" value=""><span>m</span></div></div>
+
+      <div class="group-title">¿Cuánto le queda a mi carrete?</div>
+      <div><label for="pesoTotal">Peso actual en báscula</label><div class="unit-in"><input id="pesoTotal" type="number" min="0" step="1" value="620"><span>g</span></div></div>
+      <div><label for="carrete">Peso del carrete vacío</label><div class="unit-in"><input id="carrete" type="number" min="0" step="1" value="220"><span>g</span></div></div>
+      <div class="full"><label for="necesito">Gramos que necesita tu próxima impresión (opcional)</label><div class="unit-in"><input id="necesito" type="number" min="0" step="1" value="250"><span>g</span></div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Resultado</h2>
+    <div class="readout"><div class="lbl">Conversión</div><div class="big" id="rConv">—</div><div class="small" id="rConv2"></div></div>
+    <div class="readout"><div class="lbl">Filamento restante en el carrete</div><div class="big red" id="rRest">—</div><div class="small" id="rRest2"></div></div>
+    <div class="readout" id="boxAlc"><div class="lbl">¿Te alcanza?</div><div class="big" id="rAlc">—</div><div class="small" id="rAlc2"></div></div>
+    <h3 style="margin-top:6px">Metros por kilogramo</h3>
+    <table class="tbl" id="tblKg"></table>
+    <p class="note">Peso del carrete vacío: los de cartón suelen pesar 120–180 g y los de plástico 180–260 g. Si no lo sabes, pesa uno vacío de la misma marca.</p>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>En el canal tenemos videos de materiales, calibración y trucos para aprovechar tu filamento.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Cómo convertir gramos de filamento a metros?</h2>
+<p>El filamento es un cilindro muy largo. Si conoces su diámetro y la densidad del material, puedes saber cuánto pesa cada metro y convertir en ambos sentidos. Por eso un kilo de PLA de 1.75 mm trae unos 330 metros, mientras que un kilo de ABS, que es menos denso, trae casi 400.</p>
+<span class="formula">Gramos por metro = densidad (g/cm³) × π × (diámetro en cm ÷ 2)² × 100</span>
+<p>Con ese dato, los metros son los gramos divididos entre los gramos por metro, y al revés.</p>
+<h2>Densidades típicas de filamento</h2>
+<table>
+  <tr><th>Material</th><th>Densidad (g/cm³)</th><th>Metros por kg en 1.75 mm (aprox.)</th></tr>
+  <tr><td>PLA</td><td>1.24</td><td>335 m</td></tr>
+  <tr><td>PETG</td><td>1.27</td><td>327 m</td></tr>
+  <tr><td>ABS</td><td>1.04</td><td>400 m</td></tr>
+  <tr><td>ASA</td><td>1.07</td><td>389 m</td></tr>
+  <tr><td>TPU</td><td>1.21</td><td>344 m</td></tr>
+  <tr><td>Nylon</td><td>1.14</td><td>365 m</td></tr>
+</table>
+<p>Los valores cambian un poco entre marcas y con aditivos (fibra de carbono, madera, metal, brillos). Si el fabricante publica la densidad, escríbela en "Otra densidad".</p>
+<h2>¿Cómo saber cuánto filamento le queda a un carrete?</h2>
+<ol>
+  <li>Pesa el carrete con el filamento en una báscula de cocina.</li>
+  <li>Resta el peso del carrete vacío. Si no lo conoces, pesa uno vacío de la misma marca o revisa la ficha del fabricante.</li>
+  <li>El resultado son los gramos de filamento que te quedan; la calculadora los convierte a metros.</li>
+  <li>Compara con los gramos que te indica el laminador para tu próxima impresión y evita que se acabe a la mitad.</li>
+</ol>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Cuántos metros tiene un kilo de PLA?</summary><p>Un carrete de 1 kg de PLA de 1.75 mm tiene aproximadamente 330 a 340 metros. En 2.85 mm son unos 125 metros.</p></details>
+<details class="faq"><summary>¿El laminador me da gramos o metros?</summary><p>La mayoría muestra ambos. Si solo te muestra metros, usa la conversión para saber el peso y cotizar con la calculadora de costo.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var last='g';
+function gpm(){ var d=G3.num('dens'), dia=parseFloat(document.getElementById('dia').value)/10; return d*Math.PI*Math.pow(dia/2,2)*100; }
+document.getElementById('mat').addEventListener('change',function(){ var v=this.value; if(v!=='custom'){ document.getElementById('dens').value=v; } calc(); });
+document.getElementById('gramos').addEventListener('input',function(){ last='g'; });
+document.getElementById('metros').addEventListener('input',function(){ last='m'; });
+function calc(){
+  var k=gpm(); document.getElementById('gpm').textContent=G3.fmt(k,2)+' g/m · '+G3.fmt(1000/k,0)+' m/kg';
+  var g=document.getElementById('gramos'), m=document.getElementById('metros');
+  if(last==='g'){ var mv=G3.num('gramos')/k; m.value=mv? mv.toFixed(2):''; document.getElementById('rConv').textContent=G3.fmt(mv,2)+' m'; document.getElementById('rConv2').textContent=G3.fmt(G3.num('gramos'),0)+' g de filamento'; }
+  else { var gv=G3.num('metros')*k; g.value=gv? gv.toFixed(1):''; document.getElementById('rConv').textContent=G3.fmt(gv,1)+' g'; document.getElementById('rConv2').textContent=G3.fmt(G3.num('metros'),2)+' m de filamento'; }
+  var rest=Math.max(0,G3.num('pesoTotal')-G3.num('carrete'));
+  document.getElementById('rRest').textContent=G3.fmt(rest,0)+' g';
+  document.getElementById('rRest2').textContent='≈ '+G3.fmt(rest/k,1)+' metros';
+  var nec=G3.num('necesito'), box=document.getElementById('rAlc');
+  if(nec>0){ var ok=rest>=nec; box.textContent=ok?'Sí alcanza':'No alcanza'; box.style.color=ok?'var(--ok)':'var(--red-2)';
+    document.getElementById('rAlc2').textContent= ok? 'Te sobrarán '+G3.fmt(rest-nec,0)+' g ('+G3.fmt((rest-nec)/k,1)+' m)' : 'Te faltan '+G3.fmt(nec-rest,0)+' g ('+G3.fmt((nec-rest)/k,1)+' m)'; }
+  else { box.textContent='—'; box.style.color=''; document.getElementById('rAlc2').textContent='Escribe los gramos de tu impresión'; }
+  var dia=parseFloat(document.getElementById('dia').value)/10, rows=[['PLA',1.24],['PETG',1.27],['ABS',1.04],['ASA',1.07],['TPU',1.21],['Nylon',1.14]];
+  document.getElementById('tblKg').innerHTML='<tr><th>Material</th><th>g/m</th><th>m por kg</th></tr>'+rows.map(function(r){var kk=r[1]*Math.PI*Math.pow(dia/2,2)*100;return '<tr><td>'+r[0]+'</td><td>'+kk.toFixed(2)+'</td><td>'+Math.round(1000/kk)+' m</td></tr>';}).join('');
+}
+G3.watch(['dens','dia','gramos','metros','pesoTotal','carrete','necesito'],calc);
+</script>
+</body></html>

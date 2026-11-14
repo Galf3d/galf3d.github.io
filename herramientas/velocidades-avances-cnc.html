@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de velocidades y avances CNC (RPM y avance) | Galf3D</title>
+<meta name="description" content="Calcula RPM y avance de corte para fresado, taladrado y torneado en aluminio, acero, inoxidable, latón, plástico, madera y MDF, con herramienta de carburo o HSS.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/velocidades-avances-cnc.html">
+<meta property="og:title" content="Calculadora de velocidades y avances CNC (RPM y avance) | Galf3D">
+<meta property="og:description" content="Calcula RPM y avance de corte para fresado, taladrado y torneado en aluminio, acero, inoxidable, latón, plástico, madera y MDF, con herramienta de carburo o HSS.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/velocidades-avances-cnc.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de velocidades y avances CNC", "url": "https://galf3d.github.io/herramientas/velocidades-avances-cnc.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Calculadora de velocidades y avances CNC</nav>
+  <div class="tool-head"><h1>Calculadora de velocidades y avances CNC</h1><p>Obtén RPM y avance de corte para fresado, taladrado y torneado según material, herramienta y número de filos.</p></div>
+  <div class="tool">
+  <div class="panel">
+    <h2>Parámetros de corte</h2>
+    <div class="fields">
+      <div class="full"><label>Operación</label>
+        <div class="toggle-row" id="ops">
+          <button class="chip on" data-op="fresado">Fresado</button>
+          <button class="chip" data-op="taladrado">Taladrado</button>
+          <button class="chip" data-op="torneado">Torneado</button>
+        </div></div>
+      <div><label for="mat">Material a cortar</label>
+        <select id="mat">
+          <option value="alu">Aluminio</option><option value="acero">Acero dulce (1018 / 1020)</option>
+          <option value="aleado">Acero aleado (4140)</option><option value="inox">Acero inoxidable (304)</option>
+          <option value="laton">Latón / bronce</option><option value="plastico">Plástico (acrílico, nylon, delrin)</option>
+          <option value="madera">Madera</option><option value="mdf">MDF / triplay</option>
+        </select></div>
+      <div><label for="herr">Herramienta</label>
+        <select id="herr"><option value="carb">Carburo</option><option value="hss">Acero rápido (HSS)</option></select></div>
+      <div><label for="diam" id="lblDiam">Diámetro de la herramienta</label><div class="unit-in"><input id="diam" type="number" min="0.1" step="0.1" value="6"><span>mm</span></div></div>
+      <div id="wrapZ"><label for="z">Número de filos (gavilanes)</label><div class="unit-in"><input id="z" type="number" min="1" step="1" value="2"><span>Z</span></div></div>
+      <div><label for="vc">Velocidad de corte (Vc)</label><div class="unit-in"><input id="vc" type="number" min="1" step="1" value="250"><span>m/min</span></div></div>
+      <div><label for="fz" id="lblFz">Avance por diente (fz)</label><div class="unit-in"><input id="fz" type="number" min="0.001" step="0.001" value="0.05"><span id="uFz">mm</span></div></div>
+      <div><label for="rpmMax">RPM máximas de tu máquina</label><div class="unit-in"><input id="rpmMax" type="number" min="0" step="100" value="24000"><span>RPM</span></div></div>
+      <div><label>&nbsp;</label><button class="btn btn-sm" id="reset" type="button">Restablecer valores sugeridos</button></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Resultado</h2>
+    <div class="readout"><div class="lbl">Velocidad del husillo</div><div class="big red" id="rRpm">—</div><div class="small" id="rRpm2"></div></div>
+    <div class="readout"><div class="lbl" id="lblFeed">Avance de la mesa</div><div class="big" id="rFeed">—</div><div class="small" id="rFeed2"></div></div>
+    <ul class="rows">
+      <li><span>Vc aplicada</span><span id="rVc">—</span></li>
+      <li><span>Avance por vuelta</span><span id="rFn">—</span></li>
+      <li><span>Velocidad en SFM</span><span id="rSfm">—</span></li>
+    </ul>
+    <p class="note">Son <strong>valores de inicio</strong> para condiciones normales. Ajusta según la rigidez de tu máquina, el voladizo de la herramienta, la profundidad de corte y el refrigerante. Escucha el corte: vibración o chirrido indican que debes bajar RPM o avance.</p>
+    <p class="note warn" id="limit" style="display:none"></p>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>Suscríbete para ver procesos de maquinado CNC, router y fabricación de piezas.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Cómo calcular las RPM y el avance en CNC?</h2>
+<p>Para cortar bien hay que combinar dos cosas: qué tan rápido gira la herramienta y qué tan rápido avanza contra el material. Si giras muy rápido, la herramienta se calienta y se desgasta; si avanzas muy lento, roza en lugar de cortar y también se quema. Las fórmulas parten de la <strong>velocidad de corte (Vc)</strong>, que depende del material y de la herramienta.</p>
+<h3>RPM</h3>
+<span class="formula">RPM = (Vc × 1000) ÷ (π × D)</span>
+<p>Donde Vc está en metros por minuto y D es el diámetro de la herramienta (en fresado y taladrado) o de la pieza (en torneado), en milímetros.</p>
+<h3>Avance en fresado</h3>
+<span class="formula">Avance (mm/min) = RPM × Z × fz</span>
+<p>Z es el número de filos y fz el avance por diente, es decir, el grosor de la viruta que corta cada filo.</p>
+<h3>Avance en taladrado y torneado</h3>
+<span class="formula">Avance (mm/min) = RPM × f (mm/rev)</span>
+<h2>Velocidades de corte de referencia</h2>
+<table>
+  <tr><th>Material</th><th>Vc carburo (m/min)</th><th>Vc HSS (m/min)</th></tr>
+  <tr><td>Aluminio</td><td>200 – 300</td><td>60 – 100</td></tr>
+  <tr><td>Acero dulce</td><td>100 – 150</td><td>25 – 35</td></tr>
+  <tr><td>Acero aleado</td><td>80 – 120</td><td>15 – 25</td></tr>
+  <tr><td>Acero inoxidable</td><td>60 – 90</td><td>10 – 18</td></tr>
+  <tr><td>Latón / bronce</td><td>150 – 250</td><td>50 – 70</td></tr>
+  <tr><td>Plásticos</td><td>150 – 300</td><td>60 – 120</td></tr>
+  <tr><td>Madera / MDF</td><td>300 – 600</td><td>150 – 250</td></tr>
+</table>
+<p>Son rangos generales de referencia. El catálogo del fabricante de tu herramienta siempre tiene prioridad.</p>
+<h2>Consejos de taller</h2>
+<ul>
+  <li><strong>Router de madera o CNC de escritorio:</strong> a menudo el límite es la potencia o la rigidez, no la herramienta. Baja la profundidad de corte antes que el avance.</li>
+  <li><strong>Aluminio:</strong> usa fresas de 1 a 3 filos para evacuar la viruta y lubrica para que no se pegue.</li>
+  <li><strong>Inoxidable:</strong> evita que la herramienta frote; un avance demasiado bajo endurece el material.</li>
+  <li><strong>Si tu husillo no llega a las RPM calculadas:</strong> usa las RPM máximas y recalcula el avance con ellas para mantener la carga de viruta.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Qué es SFM?</summary><p>Son pies de superficie por minuto, la velocidad de corte en unidades inglesas. 1 m/min equivale a 3.281 SFM. Muchos catálogos estadounidenses lo usan.</p></details>
+<details class="faq"><summary>¿Por qué se quema la madera en el router?</summary><p>Normalmente porque el avance es muy bajo para las RPM: la herramienta roza en lugar de cortar. Sube el avance o baja las RPM y revisa que la fresa tenga filo.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var DATA={ // vc carb, vc hss, fz carb @6mm (mm/diente), f taladro carb @6mm (mm/rev), f torno (mm/rev)
+ alu:[250,80,0.05,0.12,0.15], acero:[120,30,0.03,0.08,0.20], aleado:[100,20,0.025,0.07,0.18], inox:[70,14,0.02,0.06,0.15],
+ laton:[180,60,0.04,0.10,0.15], plastico:[200,90,0.08,0.15,0.20], madera:[400,200,0.10,0.20,0.25], mdf:[400,200,0.12,0.20,0.25]
+};
+var op='fresado';
+document.querySelectorAll('#ops .chip').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('#ops .chip').forEach(function(x){x.classList.remove('on');}); b.classList.add('on'); op=b.dataset.op; setup(); suggest(); }); });
+function setup(){
+  document.getElementById('wrapZ').style.display= op==='fresado'?'':'none';
+  document.getElementById('lblDiam').textContent= op==='torneado'?'Diámetro de la pieza':'Diámetro de la herramienta';
+  document.getElementById('lblFz').textContent= op==='fresado'?'Avance por diente (fz)':'Avance por vuelta (f)';
+  document.getElementById('uFz').textContent= op==='fresado'?'mm':'mm/rev';
+  document.getElementById('lblFeed').textContent= op==='torneado'?'Avance del carro':'Avance de la mesa';
+}
+function suggest(){
+  var d=DATA[document.getElementById('mat').value], carb=document.getElementById('herr').value==='carb';
+  var D=Math.max(0.1,G3.num('diam')), scale=Math.min(2.5,Math.max(0.3,D/6));
+  document.getElementById('vc').value= carb? d[0]:d[1];
+  var f;
+  if(op==='fresado') f=d[2]*scale*(carb?1:0.8);
+  else if(op==='taladrado') f=d[3]*scale*(carb?1:0.7);
+  else f=d[4];
+  document.getElementById('fz').value=f.toFixed(3);
+  calc();
+}
+['mat','herr'].forEach(function(id){ document.getElementById(id).addEventListener('change',suggest); });
+document.getElementById('diam').addEventListener('change',function(){ if(op!=='torneado') suggest(); });
+document.getElementById('reset').addEventListener('click',suggest);
+function calc(){
+  var vc=G3.num('vc'), D=Math.max(0.01,G3.num('diam')), z=Math.max(1,G3.num('z')), f=G3.num('fz'), max=G3.num('rpmMax');
+  var rpm=vc*1000/(Math.PI*D), used=rpm, lim=document.getElementById('limit');
+  if(max>0 && rpm>max){ used=max; lim.style.display=''; lim.textContent='Tu máquina llega a '+G3.fmt(max)+' RPM, menos que las '+G3.fmt(rpm)+' RPM calculadas. El avance se recalculó con '+G3.fmt(max)+' RPM.'; } else lim.style.display='none';
+  var fn= op==='fresado'? f*z : f;
+  var feed=used*fn;
+  document.getElementById('rRpm').textContent=G3.fmt(used)+' RPM';
+  document.getElementById('rRpm2').textContent= used<rpm? 'Calculado: '+G3.fmt(rpm)+' RPM (limitado por la máquina)':'Para Ø '+G3.fmt(D,1)+' mm';
+  document.getElementById('rFeed').textContent=G3.fmt(feed)+' mm/min';
+  document.getElementById('rFeed2').textContent=G3.fmt(feed/25.4,1)+' in/min';
+  var vcReal=used*Math.PI*D/1000;
+  document.getElementById('rVc').textContent=G3.fmt(vcReal,0)+' m/min';
+  document.getElementById('rFn').textContent=G3.fmt(fn,3)+' mm/rev';
+  document.getElementById('rSfm').textContent=G3.fmt(vcReal*3.281,0)+' SFM';
+}
+G3.watch(['vc','diam','z','fz','rpmMax'],calc);
+setup(); suggest();
+</script>
+</body></html>

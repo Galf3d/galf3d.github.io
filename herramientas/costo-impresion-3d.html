@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de costo de impresión 3D gratis (MXN) | Galf3D</title>
+<meta name="description" content="Calcula el costo real y el precio de venta de una impresión 3D: filamento, luz, desgaste de la impresora, fallos, mano de obra y margen. Gratis y en pesos mexicanos.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/costo-impresion-3d.html">
+<meta property="og:title" content="Calculadora de costo de impresión 3D gratis (MXN) | Galf3D">
+<meta property="og:description" content="Calcula el costo real y el precio de venta de una impresión 3D: filamento, luz, desgaste de la impresora, fallos, mano de obra y margen. Gratis y en pesos mexicanos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/costo-impresion-3d.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de costo de impresión 3D", "url": "https://galf3d.github.io/herramientas/costo-impresion-3d.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Calculadora de costo de impresión 3D</nav>
+  <div class="tool-head"><h1>Calculadora de costo de impresión 3D</h1><p>Calcula cuánto cuesta una pieza según filamento, tiempo, electricidad, desgaste de la máquina, fallos y margen de ganancia.</p></div>
+  <div class="tool">
+  <div class="panel">
+    <h2>Datos de la impresión</h2>
+    <div class="fields">
+      <div class="group-title">Pieza</div>
+      <div><label for="peso">Peso de la pieza</label><div class="unit-in"><input id="peso" type="number" min="0" step="0.1" value="85"><span>g</span></div></div>
+      <div><label for="cant">Cantidad de piezas</label><div class="unit-in"><input id="cant" type="number" min="1" step="1" value="1"><span>pz</span></div></div>
+      <div><label for="horas">Tiempo de impresión</label><div class="unit-in"><input id="horas" type="number" min="0" step="1" value="5"><span>h</span></div></div>
+      <div><label for="mins">Minutos</label><div class="unit-in"><input id="mins" type="number" min="0" max="59" step="1" value="30"><span>min</span></div></div>
+
+      <div class="group-title">Material</div>
+      <div><label for="material">Material</label>
+        <select id="material">
+          <option value="350">PLA</option><option value="380">PETG</option><option value="360">ABS</option>
+          <option value="420">ASA</option><option value="480">TPU</option><option value="650">Nylon</option><option value="0">Otro (escribe el precio)</option>
+        </select></div>
+      <div><label for="precioKg">Precio del carrete (1 kg)</label><div class="unit-in"><input id="precioKg" type="number" min="0" step="1" value="350"><span>MXN</span></div></div>
+
+      <div class="group-title">Máquina y electricidad</div>
+      <div><label for="watts">Consumo de la impresora</label><div class="unit-in"><input id="watts" type="number" min="0" step="10" value="150"><span>W</span></div></div>
+      <div><label for="kwh">Tarifa de luz</label><div class="unit-in"><input id="kwh" type="number" min="0" step="0.1" value="2.5"><span>$/kWh</span></div></div>
+      <div><label for="impPrecio">Precio de la impresora</label><div class="unit-in"><input id="impPrecio" type="number" min="0" step="100" value="8000"><span>MXN</span></div></div>
+      <div><label for="vida">Vida útil estimada</label><div class="unit-in"><input id="vida" type="number" min="1" step="100" value="5000"><span>h</span></div></div>
+
+      <div class="group-title">Mano de obra y venta</div>
+      <div><label for="prep">Tiempo de preparación y acabado</label><div class="unit-in"><input id="prep" type="number" min="0" step="5" value="20"><span>min</span></div></div>
+      <div><label for="tarifa">Tarifa de mano de obra</label><div class="unit-in"><input id="tarifa" type="number" min="0" step="5" value="100"><span>$/h</span></div></div>
+      <div><label for="fallo">Margen por fallos</label><div class="unit-in"><input id="fallo" type="number" min="0" max="100" step="1" value="10"><span>%</span></div></div>
+      <div><label for="margen">Ganancia deseada</label><div class="unit-in"><input id="margen" type="number" min="0" step="1" value="35"><span>%</span></div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Resultado</h2>
+    <div class="readout"><div class="lbl">Precio de venta sugerido (total)</div><div class="big red" id="rPrecio">$0.00</div><div class="small" id="rPrecioPz">$0.00 por pieza</div></div>
+    <ul class="rows">
+      <li><span>Material</span><span id="rMat">$0.00</span></li>
+      <li><span>Electricidad</span><span id="rLuz">$0.00</span></li>
+      <li><span>Desgaste de impresora</span><span id="rDesg">$0.00</span></li>
+      <li><span>Mano de obra</span><span id="rMO">$0.00</span></li>
+      <li><span>Margen por fallos</span><span id="rFallo">$0.00</span></li>
+      <li class="total"><span>Costo total</span><span id="rCosto">$0.00</span></li>
+      <li><span>Ganancia</span><span id="rGan">$0.00</span></li>
+    </ul>
+    <div class="bars" id="bars"></div>
+    <p class="note">Los valores iniciales son de ejemplo. Cámbialos por los de tu impresora, tu material y tu recibo de luz para obtener un costo real.</p>
+    <div style="margin-top:14px" class="no-print"><button class="btn btn-sm" onclick="window.print()">Imprimir cotización</button></div>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>Mira en nuestro canal cómo cotizamos impresiones reales en el taller, paso a paso.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Cómo se calcula el costo de una impresión 3D?</h2>
+<p>El precio de una pieza impresa no es solo el filamento. Para no perder dinero hay que sumar todo lo que consume el trabajo: el material, la luz que gasta la impresora, el desgaste de la máquina, el tiempo que tú inviertes y un colchón para las impresiones que fallan. Encima de ese costo se agrega la ganancia.</p>
+<h3>1. Costo del material</h3>
+<p>El laminador (Cura, PrusaSlicer, Orca, Bambu Studio) te dice cuántos gramos usa la pieza, incluyendo soportes y relleno. Se divide el precio del carrete entre 1,000 gramos y se multiplica por el peso.</p>
+<span class="formula">Material = (precio del carrete ÷ 1000) × gramos</span>
+<h3>2. Electricidad</h3>
+<p>Una impresora FDM de escritorio consume en promedio entre 100 y 250 W mientras imprime, según la temperatura de la cama. Multiplica los kilowatts por las horas y por lo que te cobran por kWh (revisa tu recibo de CFE).</p>
+<span class="formula">Electricidad = (W ÷ 1000) × horas × tarifa por kWh</span>
+<h3>3. Desgaste de la impresora</h3>
+<p>Cada hora de impresión acerca a tu máquina al final de su vida útil y gasta boquillas, bandas y camas. Una forma sencilla de cobrarlo es repartir el precio de la impresora entre las horas que esperas que dure.</p>
+<span class="formula">Desgaste = (precio de la impresora ÷ vida útil en horas) × horas de impresión</span>
+<h3>4. Mano de obra</h3>
+<p>El tiempo de impresión casi no requiere tu atención, pero preparar el archivo, retirar soportes, lijar y empacar sí. Cobra ese tiempo con tu tarifa por hora.</p>
+<h3>5. Fallos y ganancia</h3>
+<p>No todas las impresiones salen a la primera. Un margen de 5 a 15 % cubre las que se despegan o se enredan. Después se aplica la ganancia sobre el costo total.</p>
+<span class="formula">Precio = (costo total) × (1 + ganancia %)</span>
+<h2>Ejemplo práctico</h2>
+<p>Una pieza de 85 g en PLA de $350 el kilo, con 5 h 30 min de impresión en una máquina de 150 W, luz a $2.50 por kWh, impresora de $8,000 con 5,000 h de vida, 20 minutos de preparación a $100 la hora, 10 % por fallos y 35 % de ganancia. Con los valores iniciales de la calculadora puedes ver el desglose completo.</p>
+<h2>Consejos para cotizar mejor</h2>
+<ul>
+  <li><strong>Usa el peso del laminador, no el del modelo:</strong> los soportes y el relleno cambian mucho el consumo.</li>
+  <li><strong>Cobra un mínimo por pedido:</strong> en piezas muy pequeñas el costo real está en tu tiempo, no en el material.</li>
+  <li><strong>Separa el diseño:</strong> si además modelas la pieza, cotiza el diseño aparte con tu tarifa de diseñador.</li>
+  <li><strong>Materiales técnicos:</strong> ABS, ASA y nylon fallan más y necesitan más energía; sube el margen por fallos.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Cuánto cobrar por hora de impresión 3D?</summary><p>Depende de tu máquina y tu mercado, pero no conviene cobrar solo "por hora de máquina": calcula material, luz, desgaste y tu tiempo, y aplica tu ganancia. Así el precio se ajusta a cada pieza.</p></details>
+<details class="faq"><summary>¿Cuánta luz gasta una impresora 3D?</summary><p>Una impresora de escritorio suele consumir de 100 a 250 W. Una impresión de 10 horas a 150 W consume 1.5 kWh, que en México normalmente son unos cuantos pesos.</p></details>
+<details class="faq"><summary>¿Sirve para impresoras de resina?</summary><p>Sí. Escribe el precio del litro de resina como "precio del carrete" y el volumen en mililitros como si fueran gramos (la densidad de la resina es cercana a 1.1 g/ml). Agrega tiempo de lavado y curado a la mano de obra.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var mat=document.getElementById('material');
+mat.addEventListener('change',function(){ if(mat.value!=='0'){ document.getElementById('precioKg').value=mat.value; calc(); } });
+function calc(){
+  var n=G3.num, cant=Math.max(1,n('cant'));
+  var horas=n('horas')+n('mins')/60;
+  var material=n('precioKg')/1000*n('peso')*cant;
+  var luz=n('watts')/1000*horas*cant*n('kwh');
+  var desg=(n('vida')>0? n('impPrecio')/n('vida'):0)*horas*cant;
+  var mo=n('prep')/60*n('tarifa')*cant;
+  var base=material+luz+desg+mo;
+  var fallo=base*n('fallo')/100;
+  var costo=base+fallo;
+  var precio=costo*(1+n('margen')/100);
+  var set=function(id,v){document.getElementById(id).textContent=G3.mxn(v);};
+  set('rMat',material);set('rLuz',luz);set('rDesg',desg);set('rMO',mo);set('rFallo',fallo);set('rCosto',costo);set('rGan',precio-costo);set('rPrecio',precio);
+  document.getElementById('rPrecioPz').textContent=G3.mxn(precio/cant)+' por pieza · '+G3.fmt(horas,2)+' h por pieza';
+  var parts=[['Material',material],['Electricidad',luz],['Desgaste',desg],['Mano de obra',mo],['Fallos',fallo]];
+  document.getElementById('bars').innerHTML=parts.map(function(p){var pc=costo>0?p[1]/costo*100:0;return '<div class="bar"><span>'+p[0]+'</span><div class="track"><div class="fill" style="width:'+pc.toFixed(1)+'%"></div></div><span class="pct">'+pc.toFixed(0)+'%</span></div>';}).join('');
+}
+G3.watch(['peso','cant','horas','mins','precioKg','watts','kwh','impPrecio','vida','prep','tarifa','fallo','margen'],calc);
+</script>
+</body></html>

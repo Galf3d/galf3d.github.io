@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador PLC Ladder en línea gratis (escalera) | Galf3D</title>
+<meta name="description" content="Simulador de lógica de escalera (Ladder) para aprender PLC: contactos NA y NC, bobinas, arranque y paro con enclavamiento, temporizador TON y contador CTU.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/simulador-plc-ladder.html">
+<meta property="og:title" content="Simulador PLC Ladder en línea gratis (escalera) | Galf3D">
+<meta property="og:description" content="Simulador de lógica de escalera (Ladder) para aprender PLC: contactos NA y NC, bobinas, arranque y paro con enclavamiento, temporizador TON y contador CTU.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/simulador-plc-ladder.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Simulador de lógica de escalera (PLC)", "url": "https://galf3d.github.io/herramientas/simulador-plc-ladder.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Simulador de lógica de escalera (PLC)</nav>
+  <div class="tool-head"><h1>Simulador de lógica de escalera (PLC)</h1><p>Practica contactos, bobinas, enclavamientos, temporizadores y contadores en un simulador de Ladder Logic en tu navegador.</p></div>
+  <style>
+.ladder{border-left:3px solid var(--line-2);border-right:3px solid var(--line-2);padding:6px 0;overflow-x:auto}
+.ladder.run{border-color:var(--ok)}
+.rung{display:flex;align-items:flex-start;min-width:520px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.rung:last-child{border-bottom:none}
+.rn{font-family:var(--mono);font-size:.7rem;color:var(--muted);width:34px;text-align:center;padding-top:22px;flex-shrink:0}
+.ser{display:flex;align-items:flex-start;flex:1}
+.rung>.ser{flex:0 0 auto}
+.wire{flex:1;min-width:14px;height:2px;background:var(--line-2);margin-top:30px}
+.wire.on{background:var(--ok)}
+.par{display:flex;flex-direction:column;border-left:2px solid var(--line-2);border-right:2px solid var(--line-2)}
+.par.on{border-color:var(--ok)}
+.br{display:flex;align-items:flex-start}
+.el{display:flex;flex-direction:column;align-items:center;width:78px;flex-shrink:0}
+.el .tg{font-family:var(--mono);font-size:.68rem;color:var(--muted);height:16px;white-space:nowrap}
+.el .lb{font-size:.62rem;color:var(--muted);height:14px;white-space:nowrap;overflow:hidden;max-width:78px;text-overflow:ellipsis}
+.el svg{width:78px;height:28px;stroke:var(--line-2);stroke-width:2;fill:none}
+.el.on svg{stroke:var(--ok)}
+.el.on .tg{color:var(--ok)}
+.box{border:2px solid var(--line-2);border-radius:6px;padding:6px 8px;font-family:var(--mono);font-size:.7rem;min-width:118px;margin-top:8px;background:var(--bg)}
+.box.on{border-color:var(--ok)}
+.box b{color:var(--text);display:block;font-weight:500}
+.box .dn{color:var(--muted)}.box .dn.on{color:var(--ok)}
+.io-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.pb{padding:14px 10px;border-radius:10px;border:2px solid var(--line-2);background:var(--panel-2);color:var(--text);cursor:pointer;font-family:inherit;font-weight:600;font-size:.86rem;user-select:none;touch-action:none}
+.pb small{display:block;font-family:var(--mono);font-size:.66rem;color:var(--muted);font-weight:400}
+.pb.on{border-color:var(--ok);background:#0f2a1a}
+.lamp{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel-2);font-size:.86rem}
+.lamp i{width:22px;height:22px;border-radius:50%;background:#2a2f36;border:2px solid #3a424c;flex-shrink:0}
+.lamp.on i{background:var(--lc,var(--ok));box-shadow:0 0 14px var(--lc,var(--ok));border-color:transparent}
+.lamp small{display:block;font-family:var(--mono);font-size:.66rem;color:var(--muted)}
+</style>
+<div class="panel" style="margin-bottom:20px">
+  <h2>Elige un ejercicio</h2>
+  <div class="toggle-row" id="progs"></div>
+  <p class="note" id="pdesc" style="margin-top:12px"></p>
+</div>
+<div class="tool">
+  <div class="panel">
+    <div class="panel-title"><h2>Programa en escalera</h2><span class="state"><span class="dot"></span>RUN · escaneo 50 ms</span></div>
+    <div class="ladder run" id="ladder"></div>
+  </div>
+  <div>
+    <div class="panel" style="margin-bottom:20px">
+      <h2>Entradas</h2>
+      <div class="io-grid" id="ins"></div>
+      <p class="note">Los pulsadores se activan mientras los mantienes presionados. Los interruptores cambian con cada clic.</p>
+    </div>
+    <div class="panel">
+      <h2>Salidas</h2>
+      <div class="io-grid" id="outs"></div>
+    </div>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>Suscríbete para ver contenido de automatización y programación de PLC.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Qué es la lógica de escalera (Ladder)?</h2>
+<p>La lógica de escalera es el lenguaje de programación de PLC más usado en la industria. Se dibuja como un diagrama eléctrico de relevadores: dos rieles verticales de alimentación y, entre ellos, renglones (rungs) con contactos que encienden bobinas. El PLC lee el programa de arriba hacia abajo y de izquierda a derecha muchas veces por segundo; a eso se le llama <strong>ciclo de escaneo</strong>.</p>
+<h3>Elementos básicos</h3>
+<table>
+  <tr><th>Símbolo</th><th>Nombre</th><th>Se cierra cuando…</th></tr>
+  <tr><td><code>─┤ ├─</code></td><td>Contacto normalmente abierto (XIC)</td><td>la variable está en 1</td></tr>
+  <tr><td><code>─┤/├─</code></td><td>Contacto normalmente cerrado (XIO)</td><td>la variable está en 0</td></tr>
+  <tr><td><code>─( )─</code></td><td>Bobina de salida (OTE)</td><td>se energiza si el renglón tiene continuidad</td></tr>
+  <tr><td><code>TON</code></td><td>Temporizador a la conexión</td><td>activa su bit DN después del tiempo preset</td></tr>
+  <tr><td><code>CTU</code></td><td>Contador ascendente</td><td>activa su bit DN al llegar al preset</td></tr>
+</table>
+<h2>Ejercicios incluidos</h2>
+<h3>Arranque y paro con enclavamiento</h3>
+<p>Es el circuito más importante de la automatización: un botón de arranque enciende el motor y un contacto del propio motor, en paralelo, lo mantiene encendido (enclavamiento o sello) aunque sueltes el botón. El botón de paro abre el circuito. En la vida real el botón de paro se cablea normalmente cerrado por seguridad; aquí se representa como pulsador para que sea fácil de practicar.</p>
+<h3>Compuertas lógicas</h3>
+<p>Contactos en serie forman una función AND, contactos en paralelo una OR, un contacto normalmente cerrado es un NOT y la combinación de ambos produce un XOR.</p>
+<h3>Temporizador TON</h3>
+<p>Mientras la entrada esté activa, el temporizador acumula tiempo. Al llegar al preset activa su bit DN (done). Si la entrada se apaga antes, el acumulado regresa a cero.</p>
+<h3>Contador CTU</h3>
+<p>Cada flanco de subida de la entrada suma uno al acumulado. Al llegar al preset se activa el bit DN, que puede encender una salida (por ejemplo "caja llena"). La instrucción RES regresa el contador a cero.</p>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Este simulador sirve para Allen-Bradley, Siemens u otras marcas?</summary><p>Los conceptos son los mismos en todas las marcas. Los nombres XIC, XIO, OTE, TON y CTU son los de Allen-Bradley (Studio 5000 / RSLogix); en Siemens TIA Portal los equivalentes son contacto NA, contacto NC, bobina, TON y CTU.</p></details>
+<details class="faq"><summary>¿Por qué el motor sigue encendido al soltar el botón de arranque?</summary><p>Por el enclavamiento: el contacto del motor en paralelo con el arranque mantiene la continuidad del renglón. Solo el botón de paro lo abre.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+var C=function(t,tag,lb){return {t:t,tag:tag,lb:lb||''};};
+var PROGS={
+ sello:{name:'Arranque y paro',desc:'Presiona ARRANQUE para encender el motor. Suelta el botón: el motor sigue encendido por el enclavamiento. Presiona PARO para apagarlo.',
+   ins:[{tag:'I0',lb:'Arranque',m:true},{tag:'I1',lb:'Paro',m:true}],
+   outs:[{tag:'O0',lb:'Motor',c:'#2ecc71'},{tag:'O1',lb:'Piloto verde',c:'#2ecc71'},{tag:'O2',lb:'Piloto rojo',c:'#e10600'}],
+   rungs:[{n:{s:[{p:[[C('XIC','I0','Arranque')],[C('XIC','O0','Motor')]]},C('XIO','I1','Paro')]},o:{t:'OTE',tag:'O0',lb:'Motor'}},
+          {n:{s:[C('XIC','O0','Motor')]},o:{t:'OTE',tag:'O1',lb:'Piloto verde'}},
+          {n:{s:[C('XIO','O0','Motor')]},o:{t:'OTE',tag:'O2',lb:'Piloto rojo'}}]},
+ logica:{name:'Compuertas lógicas',desc:'Activa las entradas A y B y observa cómo responden AND (serie), OR (paralelo), NOT (contacto cerrado) y XOR.',
+   ins:[{tag:'I0',lb:'Entrada A'},{tag:'I1',lb:'Entrada B'}],
+   outs:[{tag:'O0',lb:'AND'},{tag:'O1',lb:'OR'},{tag:'O2',lb:'NOT A'},{tag:'O3',lb:'XOR'}],
+   rungs:[{n:{s:[C('XIC','I0','A'),C('XIC','I1','B')]},o:{t:'OTE',tag:'O0',lb:'AND'}},
+          {n:{s:[{p:[[C('XIC','I0','A')],[C('XIC','I1','B')]]}]},o:{t:'OTE',tag:'O1',lb:'OR'}},
+          {n:{s:[C('XIO','I0','A')]},o:{t:'OTE',tag:'O2',lb:'NOT A'}},
+          {n:{s:[{p:[[C('XIC','I0','A'),C('XIO','I1','B')],[C('XIO','I0','A'),C('XIC','I1','B')]]}]},o:{t:'OTE',tag:'O3',lb:'XOR'}}]},
+ ton:{name:'Temporizador TON',desc:'Activa el sensor y mantenlo encendido: después de 3 segundos se enciende la lámpara. Si lo apagas antes, el tiempo se reinicia.',
+   ins:[{tag:'I0',lb:'Sensor'}],
+   outs:[{tag:'O0',lb:'Lámpara',c:'#f5b301'},{tag:'O1',lb:'Temporizando',c:'#3fa7ff'}],
+   rungs:[{n:{s:[C('XIC','I0','Sensor')]},o:{t:'TON',tag:'T1',pre:3000}},
+          {n:{s:[C('XIC','T1.DN','Tiempo listo')]},o:{t:'OTE',tag:'O0',lb:'Lámpara'}},
+          {n:{s:[C('XIC','T1.EN','Habilitado'),C('XIO','T1.DN','Listo')]},o:{t:'OTE',tag:'O1',lb:'Temporizando'}}]},
+ ctu:{name:'Contador CTU',desc:'Cada pulso del sensor cuenta una pieza. Al llegar a 5 se enciende "Caja llena". Usa RESET para reiniciar la cuenta.',
+   ins:[{tag:'I0',lb:'Sensor de pieza',m:true},{tag:'I1',lb:'Reset',m:true}],
+   outs:[{tag:'O0',lb:'Caja llena',c:'#2ecc71'}],
+   rungs:[{n:{s:[C('XIC','I0','Sensor')]},o:{t:'CTU',tag:'C1',pre:5}},
+          {n:{s:[C('XIC','I1','Reset')]},o:{t:'RES',tag:'C1'}},
+          {n:{s:[C('XIC','C1.DN','Completo')]},o:{t:'OTE',tag:'O0',lb:'Caja llena'}}]}
+};
+var SV={xic:'<svg viewBox="0 0 78 28"><path d="M0 14h30M30 3v22M48 3v22M48 14h30"/></svg>',
+        xio:'<svg viewBox="0 0 78 28"><path d="M0 14h30M30 3v22M48 3v22M48 14h30M28 25l22-22"/></svg>',
+        ote:'<svg viewBox="0 0 78 28"><path d="M0 14h26M52 14h26"/><path d="M32 3q-8 11 0 22M46 3q8 11 0 22"/></svg>'};
+var P, T={}, TM={}, CT={}, id=0, last=performance.now();
+function get(tag){ var m=tag.split('.'); if(m.length>1){ var o=TM[m[0]]||CT[m[0]]; return o? !!o[m[1].toLowerCase()]:false; } return !!T[tag]; }
+function nodeHtml(n){
+  if(n.s) return '<div class="ser">'+n.s.map(function(x,i){return (i?'<div class="wire" data-w></div>':'')+nodeHtml(x);}).join('')+'</div>';
+  if(n.p){ n.bid=[]; return '<div class="par" data-par>'+n.p.map(function(b){ var bid='b'+(id++); n.bid.push(bid); return '<div class="br" id="'+bid+'"><div class="wire" data-w></div>'+b.map(nodeHtml).join('<div class="wire" data-w></div>')+'<div class="wire" data-w></div></div>';}).join('')+'</div>'; }
+  n.id='e'+(id++);
+  return '<div class="el" id="'+n.id+'"><div class="tg">'+n.tag+'</div>'+(n.t==='XIC'?SV.xic:SV.xio)+'<div class="lb">'+n.lb+'</div></div>';
+}
+function outHtml(o,k){
+  o.id='o'+k;
+  if(o.t==='OTE') return '<div class="el" id="'+o.id+'"><div class="tg">'+o.tag+'</div>'+SV.ote+'<div class="lb">'+o.lb+'</div></div>';
+  if(o.t==='TON') return '<div class="box" id="'+o.id+'"><b>TON '+o.tag+'</b>PRE '+(o.pre/1000).toFixed(1)+' s<br>ACC <span data-acc>0.0</span> s<br><span class="dn" data-dn>DN</span></div>';
+  if(o.t==='CTU') return '<div class="box" id="'+o.id+'"><b>CTU '+o.tag+'</b>PRE '+o.pre+'<br>ACC <span data-acc>0</span><br><span class="dn" data-dn>DN</span></div>';
+  if(o.t==='RES') return '<div class="box" id="'+o.id+'"><b>RES</b>'+o.tag+'</div>';
+}
+function evalN(n){
+  if(n.s){ var ok=true; n.s.forEach(function(x){ ok = evalN(x) && ok; }); return ok; }
+  if(n.p){ var any=false; n.bon=[]; n.p.forEach(function(b){ var ok=true; b.forEach(function(x){ ok=evalN(x)&&ok; }); n.bon.push(ok); any=any||ok; }); n.on=any; return any; }
+  var v= n.t==='XIC'? get(n.tag) : !get(n.tag); n.on=v; return v;
+}
+function load(k){
+  P=PROGS[k]; T={}; TM={}; CT={}; id=0;
+  document.querySelectorAll('#progs .chip').forEach(function(c){ c.classList.toggle('on',c.dataset.k===k); });
+  document.getElementById('pdesc').textContent=P.desc;
+  P.rungs.forEach(function(r){ if(r.o.t==='TON') TM[r.o.tag]={acc:0,dn:false,en:false}; if(r.o.t==='CTU') CT[r.o.tag]={acc:0,dn:false,prev:false}; });
+  document.getElementById('ladder').innerHTML=P.rungs.map(function(r,i){ return '<div class="rung" id="r'+i+'"><div class="rn">'+String(i).padStart(3,'0')+'</div>'+nodeHtml(r.n)+'<div class="wire" data-w></div>'+outHtml(r.o,i)+'</div>'; }).join('');
+  var ins=document.getElementById('ins'); ins.innerHTML=P.ins.map(function(x){ return '<button class="pb" data-tag="'+x.tag+'" data-m="'+(x.m?1:0)+'" type="button">'+x.lb+'<small>'+x.tag+' · '+(x.m?'pulsador':'interruptor')+'</small></button>'; }).join('');
+  ins.querySelectorAll('.pb').forEach(function(b){
+    var tag=b.dataset.tag;
+    if(b.dataset.m==='1'){
+      var on=function(e){ e.preventDefault(); T[tag]=true; }, off=function(){ T[tag]=false; };
+      b.addEventListener('pointerdown',on); b.addEventListener('pointerup',off); b.addEventListener('pointerleave',off); b.addEventListener('pointercancel',off);
+    } else b.addEventListener('click',function(){ T[tag]=!T[tag]; });
+  });
+  document.getElementById('outs').innerHTML=P.outs.map(function(x){ return '<div class="lamp" data-tag="'+x.tag+'" style="--lc:'+(x.c||'#2ecc71')+'"><i></i><div>'+x.lb+'<small>'+x.tag+'</small></div></div>'; }).join('');
+}
+function scan(){
+  var now=performance.now(), dt=now-last; last=now;
+  P.rungs.forEach(function(r,i){
+    var pw=evalN(r.n), o=r.o, el=document.getElementById(o.id), row=document.getElementById('r'+i);
+    if(o.t==='OTE') T[o.tag]=pw;
+    if(o.t==='TON'){ var t=TM[o.tag]; if(pw){ t.en=true; t.acc=Math.min(o.pre,t.acc+dt); t.dn=t.acc>=o.pre; } else { t.en=false; t.acc=0; t.dn=false; }
+      el.querySelector('[data-acc]').textContent=(t.acc/1000).toFixed(1); el.querySelector('[data-dn]').classList.toggle('on',t.dn); }
+    if(o.t==='CTU'){ var c=CT[o.tag]; if(pw && !c.prev){ c.acc++; } c.prev=pw; c.dn=c.acc>=o.pre;
+      el.querySelector('[data-acc]').textContent=c.acc; el.querySelector('[data-dn]').classList.toggle('on',c.dn); }
+    if(o.t==='RES' && pw){ var cc=CT[o.tag]; if(cc){ cc.acc=0; cc.dn=false; } }
+    el.classList.toggle('on',pw);
+    row.querySelectorAll('[data-w]').forEach(function(w){ w.classList.toggle('on',pw); }); paint(r.n);
+  });
+  document.querySelectorAll('#ins .pb').forEach(function(b){ b.classList.toggle('on',!!T[b.dataset.tag]); });
+  document.querySelectorAll('#outs .lamp').forEach(function(l){ l.classList.toggle('on',!!T[l.dataset.tag]); });
+}
+function paint(n){
+  if(n.s){ n.s.forEach(paint); return; }
+  if(n.p){ n.p.forEach(function(b,i){ b.forEach(paint); var be=document.getElementById(n.bid[i]); if(be) be.querySelectorAll('[data-w]').forEach(function(w){ w.classList.toggle('on',n.bon[i]); }); }); var b0=document.getElementById(n.bid[0]); if(b0) b0.parentElement.classList.toggle('on',n.on); return; }
+  var e=document.getElementById(n.id); if(e) e.classList.toggle('on',n.on);
+}
+document.getElementById('progs').innerHTML=Object.keys(PROGS).map(function(k){ return '<button class="chip" data-k="'+k+'" type="button">'+PROGS[k].name+'</button>'; }).join('');
+document.querySelectorAll('#progs .chip').forEach(function(c){ c.addEventListener('click',function(){ load(c.dataset.k); }); });
+load('sello'); setInterval(scan,50);
+</script>
+</body></html>
