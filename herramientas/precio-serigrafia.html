@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de precio de serigrafía por prenda | Galf3D</title>
+<meta name="description" content="Calcula cuánto cobrar por playera en serigrafía: pantallas por color, tinta plastisol por gramo, insumos, mano de obra, diseño y ganancia, con precios por volumen.">
+<link rel="canonical" href="https://galf3d.github.io/herramientas/precio-serigrafia.html">
+<meta property="og:title" content="Calculadora de precio de serigrafía por prenda | Galf3D">
+<meta property="og:description" content="Calcula cuánto cobrar por playera en serigrafía: pantallas por color, tinta plastisol por gramo, insumos, mano de obra, diseño y ganancia, con precios por volumen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://galf3d.github.io/herramientas/precio-serigrafia.html">
+<meta property="og:image" content="https://galf3d.github.io/assets/og-galf3d.png">
+<meta name="theme-color" content="#0e1013">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de precio de serigrafía", "url": "https://galf3d.github.io/herramientas/precio-serigrafia.html", "applicationCategory": "UtilityApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "MXN"}, "publisher": {"@type": "Organization", "name": "Galf3D"}}</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="../index.html" class="brand"><img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:38px;width:auto"><span class="sub">HERRAMIENTAS</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#herramientas" class="on">Herramientas</a></li>
+      <li><a href="../index.html#guias">Guías</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li class="nav-social">
+        <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+        <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+        <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook Galf3D"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+      </li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header><main>
+<div class="wrap">
+  <nav class="crumbs"><a href="../index.html">Inicio</a> / <a href="../index.html#herramientas">Herramientas</a> / Calculadora de precio de serigrafía</nav>
+  <div class="tool-head"><h1>Calculadora de precio de serigrafía</h1><p>Calcula el precio por prenda según colores, pantallas, tinta, mano de obra y cantidad, con tabla de precios por volumen.</p></div>
+  <div class="tool">
+  <div class="panel">
+    <h2>Datos del pedido</h2>
+    <div class="fields">
+      <div class="group-title">Pedido</div>
+      <div><label for="prendas">Número de prendas</label><div class="unit-in"><input id="prendas" type="number" min="1" step="1" value="50"><span>pz</span></div></div>
+      <div><label for="colores">Número de colores (tintas)</label><div class="unit-in"><input id="colores" type="number" min="1" max="12" step="1" value="2"><span>col</span></div></div>
+      <div><label for="ubic">Ubicaciones de impresión</label><div class="unit-in"><input id="ubic" type="number" min="1" step="1" value="1"><span>×</span></div></div>
+      <div><label for="prenda">Costo de la prenda (0 si la trae el cliente)</label><div class="unit-in"><input id="prenda" type="number" min="0" step="5" value="0"><span>MXN</span></div></div>
+
+      <div class="group-title">Pantallas e insumos</div>
+      <div><label for="pantalla">Costo por pantalla (por color)</label><div class="unit-in"><input id="pantalla" type="number" min="0" step="10" value="150"><span>MXN</span></div></div>
+      <div><label for="tinta">Precio de la tinta</label><div class="unit-in"><input id="tinta" type="number" min="0" step="10" value="260"><span>$/kg</span></div></div>
+      <div><label for="gramos">Tinta por impresión y color</label><div class="unit-in"><input id="gramos" type="number" min="0" step="0.5" value="6"><span>g</span></div></div>
+      <div><label for="otros">Otros insumos por prenda</label><div class="unit-in"><input id="otros" type="number" min="0" step="0.5" value="2"><span>MXN</span></div></div>
+
+      <div class="group-title">Mano de obra y venta</div>
+      <div><label for="tImp">Tiempo por impresión y color</label><div class="unit-in"><input id="tImp" type="number" min="0" step="0.1" value="0.8"><span>min</span></div></div>
+      <div><label for="tarifa">Tarifa de mano de obra</label><div class="unit-in"><input id="tarifa" type="number" min="0" step="5" value="90"><span>$/h</span></div></div>
+      <div><label for="arte">Diseño / preparación de arte</label><div class="unit-in"><input id="arte" type="number" min="0" step="10" value="150"><span>MXN</span></div></div>
+      <div><label for="margen">Ganancia deseada</label><div class="unit-in"><input id="margen" type="number" min="0" step="1" value="45"><span>%</span></div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Resultado</h2>
+    <div class="readout"><div class="lbl">Precio por prenda</div><div class="big red" id="rPz">$0.00</div><div class="small" id="rTot">Total: $0.00</div></div>
+    <ul class="rows">
+      <li><span>Pantallas</span><span id="rPant">$0.00</span></li>
+      <li><span>Tinta</span><span id="rTinta">$0.00</span></li>
+      <li><span>Otros insumos</span><span id="rOtros">$0.00</span></li>
+      <li><span>Prendas</span><span id="rPrendas">$0.00</span></li>
+      <li><span>Mano de obra</span><span id="rMO">$0.00</span></li>
+      <li><span>Arte</span><span id="rArte">$0.00</span></li>
+      <li class="total"><span>Costo total</span><span id="rCosto">$0.00</span></li>
+      <li><span>Ganancia</span><span id="rGan">$0.00</span></li>
+    </ul>
+    <h3 style="margin-top:18px">Precio por prenda según la cantidad</h3>
+    <table class="tbl" id="tbl"></table>
+    <p class="note">La tabla muestra por qué conviene vender por volumen: las pantallas y el arte se reparten entre más prendas.</p>
+  </div>
+</div>
+
+  <div class="cta-video no-print">
+  <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div>
+  <div><h3>Aprende más en video</h3><p>En el canal compartimos procesos de taller, insumos y trucos de producción.</p></div>
+  <a class="btn btn-primary" href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener">Ver canal y suscribirme</a>
+</div>
+  <article class="guide">
+<h2>¿Cómo calcular el precio de una impresión en serigrafía?</h2>
+<p>En serigrafía hay costos que se pagan una sola vez por pedido (preparar el arte y quemar una pantalla por cada color) y costos que se repiten en cada prenda (tinta, insumos y tiempo de impresión). Por eso el precio por pieza baja mucho cuando el pedido es más grande.</p>
+<h3>1. Costos fijos del pedido</h3>
+<span class="formula">Fijos = (pantallas por color × colores × ubicaciones) + diseño</span>
+<p>Cada color necesita su propia pantalla: malla, emulsión, revelado y registro. Si imprimes al frente y en la espalda, se duplican.</p>
+<h3>2. Costos por prenda</h3>
+<span class="formula">Por prenda = tinta + insumos + prenda + (minutos ÷ 60 × tarifa)</span>
+<p>La tinta se calcula por gramos. Un diseño mediano en plastisol usa aproximadamente de 4 a 10 g por color, según el tamaño, la malla y si la prenda es oscura (necesita base blanca).</p>
+<h3>3. Precio final</h3>
+<span class="formula">Precio por prenda = (fijos + por prenda × cantidad) × (1 + ganancia) ÷ cantidad</span>
+<h2>Consejos para cotizar serigrafía</h2>
+<ul>
+  <li><strong>Pide un mínimo de piezas:</strong> con pocas prendas, el costo de las pantallas hace que cada pieza salga cara.</li>
+  <li><strong>Menos colores, mejor precio:</strong> cada color extra suma una pantalla y una pasada más.</li>
+  <li><strong>Prendas oscuras:</strong> casi siempre necesitan base blanca o tinta de alta opacidad, que es una pantalla y una pasada extra.</li>
+  <li><strong>Controla la viscosidad de la tinta:</strong> un plastisol demasiado espeso tapa la malla y gasta más tinta. Un reductor para plastisol ayuda a que la tinta pase mejor y rinda más.</li>
+  <li><strong>Curado:</strong> el plastisol debe llegar a su temperatura de curado (normalmente entre 150 y 165 °C) para que no se despegue con el lavado.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<details class="faq"><summary>¿Cuánto cobrar por playera en serigrafía?</summary><p>Depende de la cantidad, los colores y si la prenda va incluida. Con esta calculadora puedes ver cómo cambia el precio por pieza según el volumen y ajustar tus precios por escala.</p></details>
+<details class="faq"><summary>¿Cuántas playeras salen con un kilo de plastisol?</summary><p>Con unos 6 g por impresión de un color, un kilo alcanza para unas 160 impresiones. En diseños grandes o en prendas oscuras rinde menos.</p></details>
+<details class="faq"><summary>¿Venden insumos de serigrafía?</summary><p>Sí. En Galf3D manejamos reductores e insumos para serigrafía. Escríbenos por Facebook para precios y disponibilidad.</p></details>
+</article>
+</div>
+<section class="no-print"><div class="wrap"><div class="sec-head"><span class="code">[»]</span><h2>Más herramientas y guías</h2></div><div class="related"><a href="costo-impresion-3d.html"><small>IMPRESIÓN 3D</small>Calculadora de costo de impresión 3D</a><a href="calculadora-filamento.html"><small>IMPRESIÓN 3D</small>Calculadora de filamento</a><a href="velocidades-avances-cnc.html"><small>CNC · MAQUINADO</small>Calculadora de velocidades y avances CNC</a><a href="cotizador-por-hora.html"><small>TALLER</small>Cotizador de trabajos por hora</a><a href="simulador-plc-ladder.html"><small>AUTOMATIZACIÓN</small>Simulador de lógica de escalera (PLC)</a><a href="conversor-unidades.html"><small>INGENIERÍA</small>Conversor de unidades industriales</a><a href="costo-corte-laser.html"><small>CORTE LÁSER</small>Calculadora de tiempo y costo de corte láser</a><a href="../guias/calibrar-impresora-3d.html"><small>GUÍA · IMPRESIÓN 3D</small>Cómo calibrar tu impresora 3D paso a paso</a><a href="../guias/que-filamento-elegir.html"><small>GUÍA · MATERIALES</small>Qué filamento elegir: PLA, PETG, ABS, ASA, TPU o Nylon</a></div></div></section>
+<section class="no-print">
+  <div class="wrap">
+    <div class="sec-head"><span class="code">[+]</span><h2>Síguenos</h2></div>
+    <div class="follow">
+      <a href="https://www.youtube.com/@Galf3D24?sub_confirmation=1" target="_blank" rel="noopener"><div class="ico yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></div><div><strong>YouTube</strong><span>Tutoriales de impresión 3D, diseño y taller</span></div></a>
+      <a href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener"><div class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></div><div><strong>TikTok</strong><span>Impresiones, procesos y trucos rápidos</span></div></a>
+      <a href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener"><div class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></div><div><strong>Facebook</strong><span>Novedades, productos y contacto directo</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/logo-horizontal-blanco.png" alt="Galf3D" style="height:34px;width:auto">
+      <p>© <span id="year">2026</span> Galf3D · Torreón, Coahuila, México</p>
+    </div>
+    <ul>
+      <li><a href="../index.html#herramientas">Herramientas</a></li>
+      <li><a href="../index.html#guias">Guías</a></li>
+      <li><a href="../index.html#acerca">Acerca de</a></li>
+      <li><a href="../index.html#contacto">Contacto</a></li>
+      <li><a href="../privacidad.html">Política de privacidad</a></li>
+    </ul>
+    <div class="nav-social" style="display:flex">
+      <a class="soc" href="https://www.youtube.com/@Galf3D24" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@galf3d024" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.3 6.3 0 1 0 5.3 6.2V8.6a8.1 8.1 0 0 0 4.7 1.5V6.8a4.8 4.8 0 0 1-4.7-4.8z"/></svg></a>
+      <a class="soc" href="https://www.facebook.com/Galf3D24" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21.9v-7.7h2.6l.4-3h-3V9.3c0-.9.3-1.5 1.5-1.5h1.6V5.1c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.7h3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js"></script>
+<script>
+function cost(q){
+  var n=G3.num, c=Math.max(1,n('colores')), u=Math.max(1,n('ubic'));
+  var pant=n('pantalla')*c*u, arte=n('arte');
+  var tinta=n('tinta')/1000*n('gramos')*c*u*q, otros=n('otros')*q, prendas=n('prenda')*q;
+  var mo=n('tImp')*c*u/60*n('tarifa')*q;
+  var costo=pant+arte+tinta+otros+prendas+mo;
+  return {pant:pant,arte:arte,tinta:tinta,otros:otros,prendas:prendas,mo:mo,costo:costo,precio:costo*(1+n('margen')/100)};
+}
+function calc(){
+  var q=Math.max(1,G3.num('prendas')), r=cost(q), s=function(id,v){document.getElementById(id).textContent=G3.mxn(v);};
+  s('rPant',r.pant);s('rTinta',r.tinta);s('rOtros',r.otros);s('rPrendas',r.prendas);s('rMO',r.mo);s('rArte',r.arte);s('rCosto',r.costo);s('rGan',r.precio-r.costo);
+  s('rPz',r.precio/q); document.getElementById('rTot').textContent='Total del pedido: '+G3.mxn(r.precio)+' · '+G3.fmt(q)+' prendas';
+  var qs=[12,24,50,100,250,500];
+  document.getElementById('tbl').innerHTML='<tr><th>Cantidad</th><th>Precio por prenda</th><th>Total</th></tr>'+qs.map(function(x){var k=cost(x);return '<tr'+(x===q?' style="color:var(--red-2)"':'')+'><td>'+x+'</td><td>'+G3.mxn(k.precio/x)+'</td><td>'+G3.mxn(k.precio)+'</td></tr>';}).join('');
+}
+G3.watch(['prendas','colores','ubic','prenda','pantalla','tinta','gramos','otros','tImp','tarifa','arte','margen'],calc);
+</script>
+</body></html>
